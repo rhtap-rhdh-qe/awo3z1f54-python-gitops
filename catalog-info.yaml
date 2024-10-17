@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: awo3z1f54-python-gitops
+  description: This is GitOps manifest for awo3z1f54-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: awo3z1f54-python
+    janus-idp.io/tekton: awo3z1f54-python
+    backstage.io/kubernetes-id: awo3z1f54-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:awo3z1f54-python
